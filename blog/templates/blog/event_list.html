@@ -1,0 +1,68 @@
+{% load staticfiles %}
+<html>
+  <head>
+      <title>Sport Kenilworth</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+      <link rel="shortcut icon"  href="{% static 'images/favicon (3).ico' %}" />
+      <link href="https://fonts.googleapis.com/css?family=Lato|Playball" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1>Here is a list of new starter events for each club...</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Back to list of clubs:</h2>
+        </div>
+        <div class="col">
+          <a href="{% url 'club_list' %}" role="button" class="btn btn-primary btn-lg">Clubs </a>
+        </div>
+        <div class="col-md-5">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+
+      {% for events in events %}
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-xs-12" style="height:30px;"></div>
+            <p>Event name: {{ events.event }}</p>
+            <p>Description: {{ events.description }}</p>
+            <p>Date and time: {{ events.date }}</p>
+            <p>Location: {{ events.location }}</p>
+            <p>Contact: {{ events.contact }}</p>
+            <div class="col-xs-12" style="height:15px;"></div>
+          </div>
+        </div>
+      {% endfor %}
+
+    </div>
+
+    <div class="col-xs-12" style="height:15px;"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <a href="{% url 'club_list' %}" role="button" class="btn btn-primary btn-lg">Clubs </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container marketing">
+      <hr class="featurette-divider">
+      <footer>
+        <p class="">&copy; Sport Kenilworth. est. 2017.｜<a href="{% url 'contact' %}" class="">Contact/Add your club </a></p>
+      </footer>
+    </div>
+
+  </body>
+</html>
