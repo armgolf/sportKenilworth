@@ -25,7 +25,7 @@ SECRET_KEY = '86m)kil6$524^(%d-n6-^v$$kx(if=r6!e2k9jtl2vm=rjx_y8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com', 'www.sportkenilworth.co.uk']
 
 
 # Application definition
