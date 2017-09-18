@@ -13,19 +13,25 @@
         <link href="https://fonts.googleapis.com/css?family=Lato|Playball" rel="stylesheet">
     </head>
     <body>
+      <div class="col-xs-12" style="height:70px;"></div>
       <div class="container">
         <div class="row">
-          <div class="col">
-            <h2>To add your sports club/group to this website, please contact sportkenilworth@gmail.com.</h2>
+          <div class="col-md-1.5">
+            <img src="{% static 'images/favicon.png' %}" width="100" height="100">
+          </div>
+          <div class="col-md-9 align-self-center">
+            <h2>To add your sports club/group to this website, please contact <i>sportkenilworth@gmail.com.</i></h2>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <a href="{% url 'club_list' %}" role="button" class="btn btn-primary btn-lg">Back to Clubs </a>
-            <a href="{% url 'event_list' %}" role="button" class="btn btn-primary btn-lg">Back to Events </a>
+            <div class="col-xs-12" style="height:30px;"></div>
+            <a href="{% url 'club_list' %}" role="button" class="btn btn-success btn-lg">Go to Clubs </a>
+            <a href="{% url 'event_list' %}" role="button" class="btn btn-success btn-lg">Go to Events </a>
           </div>
         </div>
-      </div>
 
+        <div class="col-xs-12" style="height:30px;"></div>
+      </div>
     </body>
 </html>
