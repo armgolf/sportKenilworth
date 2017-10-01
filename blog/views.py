@@ -3,6 +3,7 @@ from blog.models import Clubs, Events
 
 def club_list(request):
     clubs = Clubs.objects.all()
+    clubs = clubs.order_by('name')
     return render(request, 'blog/club_list.html', {'clubs': clubs,})
 
 def event_list(request):
